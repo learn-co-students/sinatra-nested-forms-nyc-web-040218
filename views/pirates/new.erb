@@ -1,1 +1,28 @@
-<h1>Make your form here</h1>
+<h1>
+  <form method="POST" action="/pirates">
+    Pirate Name: <input type="text" name="pirate[name]"><br />
+    Pirate Height: <input type="text" name="pirate[height]"><br />
+    Pirate Weight: <input type="text" name="pirate[weight]"><br />
+    Ship Name: <input type="text" id="ship_name_1" name="pirate[ships][][name]"><br />
+    Ship Type: <input type="text" id="ship_type_1" name="pirate[ships][][type]"><br />
+    Ship Booty: <input type="text" id="ship_booty_1" name="pirate[ships][][booty]"><br />
+    Ship Name: <input type="text" id="ship_name_2" name="pirate[ships][][name]"><br />
+    Ship Type: <input type="text" id="ship_type_2" name="pirate[ships][][type]"><br />
+    Ship Booty: <input type="text" id="ship_booty_2" name="pirate[ships][][booty]"><br />
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</h1>
+
+<%# params = {}
+params["pirate"] = {}
+params["pirate"]["name"] = "Ahab"
+params["pirate"]["weight"] = "200"
+params["pirate"]["height"] = "6"
+params["pirate"]["ships"] = {}
+params["pirate"]["ships"]["name"] = "Pequod"
+params["pirate"]["ships"]["type"] = "clipper"
+params["pirate"]["ships"]["booty"] = "gold"
+ 
+params
+  => {"pirate"=>{"name"=>"Ahab", "weight"=>"200","height"=>"6", "ship"=>{"name"=>"Pequod", "type"=>"clipper", "booty"=>"gold"}}} %>
