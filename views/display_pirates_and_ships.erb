@@ -1,0 +1,9 @@
+<p><%= @pirate.name%></p>
+<p><%= @pirate.weight%></p>
+<p><%= @pirate.height%></p>
+
+<% @ships.each do |ship_instance| %>
+  <p><%= ship_instance.name %></p>
+  <p><%= ship_instance.type %> </p>
+  <p><%= ship_instance.booty %> </p>
+<% end %>
