@@ -14,9 +14,9 @@ module FormsLab
     end
 
     post '/pirates' do
-      pirate0 = Pirate.new(params[:pirate])
-      ship0 = Ship.new(params[:pirate][:ships][0])
-      ship1 = Ship.new(params[:pirate][:ships][1])
+      p0 = Pirate.new(params[:pirate])
+      s0 = Ship.new(params[:pirate][:ships][0])
+      s1 = Ship.new(params[:pirate][:ships][1])
 
       # binding.pry
 
@@ -25,3 +25,17 @@ module FormsLab
 
   end
 end
+
+# <%# params = {}
+# params["pirate"] = {}
+# params["pirate"]["name"] = "Ahab"
+# params["pirate"]["weight"] = "200"
+# params["pirate"]["height"] = "6"
+# params["pirate"]["ships"] = {}
+# params["pirate"]["ships"]["name"] = "Pequod"
+# params["pirate"]["ships"]["type"] = "clipper"
+# params["pirate"]["ships"]["booty"] = "gold"
+ 
+# params
+#   => {"pirate"=>{"name"=>"Ahab", "weight"=>"200","height"=>"6", "ship"=>{"name"=>"Pequod", "type"=>"clipper", "booty"=>"gold"}}} %>
+
